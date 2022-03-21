@@ -14,7 +14,7 @@
 
 ### Part One: The Test Driven Development Cycle (Red, Green, Refactor) 
 
-We will follow the best practices of TDD, and we will create our tests first and write production code once we see the test fail. We will create a `Student` and a `StudentTest` class for a grades application, before you start let's analyse the requirements for the `Student` class:
+We will follow the best practices of TDD, and we will create our tests first and write production code once we see the test fail. We will create a `student` and a `StudentTest` class for a grades application, before you start let's analyse the requirements for the `student` class:
  
 - `id` should be a `long` number used to represent a "unique user" in our application.
 - `name` is a `String` that holds the name of the student.
@@ -23,8 +23,8 @@ We will follow the best practices of TDD, and we will create our tests first and
 1. Create a new branch called `students-tests` and read carefully the next instructions.
 1. Create a `StudentTest.java` class file inside of `src/test/java` (you might have to create these folders yourself) and remember to write the test before the actual production code. We will simulate the `C(reate) R(ead)` from the `CRUD` functionality in our grades application, you should be able to test and create the following requirements:
 
-    - The `Student` class should have a constructor that sets both the name and id property, it initializes the grades property as an empty ArrayList.
-    - The `Student` class should have the following methods:
+    - The `student` class should have a constructor that sets both the name and id property, it initializes the grades property as an empty ArrayList.
+    - The `student` class should have the following methods:
 ```java
     // returns the student's id
     public long getId(){...}
@@ -42,21 +42,21 @@ We will follow the best practices of TDD, and we will create our tests first and
     public double getGradeAverage(){...}
 ```
 1. As always, commit and push all your changes once you're done.   
-_At the end of the exercise you will end up with a `Student.java` and a `StudentTest.java` class._
+_At the end of the exercise you will end up with a `student.java` and a `StudentTest.java` class._
 
 #### Bonus
 
-- Go ahead and try to add the rest of the `CRUD` tests and functionality, write the methods for `updateGrade()` and `deleteGrade()` in the `Student` class.
+- Go ahead and try to add the rest of the `CRUD` tests and functionality, write the methods for `updateGrade()` and `deleteGrade()` in the `student` class.
 
 ### Part Two: Testing Legacy Code
 
-Once you are done with the `Student.java` class.
+Once you are done with the `student.java` class.
  
 1. Checkout to the `cohorts-feature` branch, there you will find a `Cohort.java` class inside the `src/main/java` folder, this class has already a lot of methods to calculate the cohort average grade and add a student. Let's go ahead and make sure there's sufficient tests for this class to be deployed to production:
 
 1. Start by creating a new branch called: `cohorts-tests`.
 1. Then create a `CohortTest` class and build a test for each of the following requirements:
-    - A `Cohort` instance can add a `Student` to the `List` of students.
+    - A `Cohort` instance can add a `student` to the `List` of students.
     - A `Cohort` instance can get the current `List` of students.
     - A `Cohort` instance can get the average, and it's being calculated correctly. 
 1. Go back to the `StudentTest` class and refactor the code to avoid any repetition in the test cases, the use of the `@Before` annotation will be useful to achieve this, do the same with this new `CohortTest` class if you find any code repetition as well.
