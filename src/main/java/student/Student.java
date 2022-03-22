@@ -39,13 +39,32 @@ public class Student {
         this.grades = grades;
     }
 
-    public double getGradeAverage(ArrayList<Integer> grades){
+    public static double getGradeAverage(ArrayList<Integer> grades) {
         int sum = 0;
         double avr = 0.0;
         for (Integer grade : grades) sum += grade;
-        avr = sum / grades.size();
+        avr = (double)sum / grades.size();
         return avr;
         }
+
+    public static int updateGrade(ArrayList<Integer> grades, int newGrade, int index) {
+        try {
+            grades.set(index, newGrade);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return grades.get(index);
+    }
+    public static int deleteGrade(ArrayList<Integer> grades, int index) {
+        try {
+            grades.remove(index);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return grades.get(index);
+    }
+
+
 
 
 }
