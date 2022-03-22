@@ -39,6 +39,11 @@ public class Student {
         this.grades = grades;
     }
 
+    public static int addGrade(ArrayList<Integer> grades, int grade) {
+        grades.add(grade);
+        return grades.get(grades.lastIndexOf(grade));
+    }
+
     public static double getGradeAverage(ArrayList<Integer> grades) {
         int sum = 0;
         double avr = 0.0;
