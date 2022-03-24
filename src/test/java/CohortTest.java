@@ -9,7 +9,7 @@ public class CohortTest {
 
 
     @Before
-    public void init(){
+    public void setUp(){
 
         emptyCohort = new Cohort();
         elixirCohort = new Cohort();
